@@ -98,29 +98,18 @@ class Monster extends Phaser.Scene {
 
         // Polling input: move left
         if (my.keys.A.isDown) {
-            my.sprite.body.x -= 2;
-            my.sprite.smile.x -= 2;
-            my.sprite.leftArm.x -= 2;
-            my.sprite.rightArm.x -= 2;
-            my.sprite.leftLeg.x -= 2;
-            my.sprite.rightLeg.x -= 2;
-            my.sprite.eye.x -= 2;
-            my.sprite.nose.x -= 2;
-            my.sprite.antenna.x -= 2;
-            my.sprite.fangs.x -= 2;
+            for (let part in my.sprite) {
+                my.sprite[part].x -= 2;
+            }
+   
         }
         // Polling input: move right    
         if (my.keys.D.isDown) {
-            my.sprite.body.x += 2;
-            my.sprite.smile.x += 2;
-            my.sprite.leftArm.x += 2;
-            my.sprite.rightArm.x += 2;
-            my.sprite.leftLeg.x += 2;
-            my.sprite.rightLeg.x += 2;
-            my.sprite.eye.x += 2;
-            my.sprite.nose.x += 2;
-            my.sprite.antenna.x += 2;
-            my.sprite.fangs.x += 2;
+
+            for (let part in my.sprite) {
+                my.sprite[part].x += 2;
+            }
+   
         }
 
        
